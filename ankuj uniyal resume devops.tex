@@ -1,0 +1,306 @@
+% !TeX spellcheck = en_GB
+% !TeX program = pdflatex
+%
+% LuxSleek-CV 1.1 LaTeX template
+% Author: Andreï V. Kostyrka, University of Luxembourg
+%
+% 1.1: added tracking and letter-spacing for prettier lower caps, added `~` for language levels
+% 1.0: initial release
+%
+% This template fills the gap in the available variety of templates
+% by proposing something that is not a custom class, not using any
+% hard-coded settings deeply hidden in style files, and provides
+% a handful of custom command definitions that are as transparent as it gets.
+% Developed at the University of Luxembourg.
+%
+% *NOTHING IS HARCODED, and never should be.*
+%
+% Target audience: applicants in the IT industry, or business in general
+%
+% The main strength of this template is, it explicitly showcases how
+% to break the flow of text to achieve the most flexible right alignment
+% of dates for multiple configurations.
+
+\documentclass[11pt, a4paper]{article} 
+
+\usepackage[T1]{fontenc}     % We are using pdfLaTeX,
+\usepackage[utf8]{inputenc}  % hence this preparation
+\usepackage[british]{babel}  
+\usepackage[left = 0mm, right = 0mm, top = 0mm, bottom = 0mm]{geometry}
+\usepackage[stretch = 25, shrink = 25, tracking=true, letterspace=30]{microtype}  
+\usepackage{graphicx}        % To insert pictures
+\usepackage{xcolor}          % To add colour to the document
+\usepackage{marvosym}        % Provides icons for the contact details
+\usepackage{fontawesome}     % Provides more icons for the contact details
+
+\usepackage{enumitem}        % To redefine spacing in lists
+\setlist{parsep = 0pt, topsep = 0pt, partopsep = 1pt, itemsep = 1pt, leftmargin = 6mm}
+
+\usepackage{FiraSans}        % Change this to use any font, but keep it simple
+\renewcommand{\familydefault}{\sfdefault}
+
+\definecolor{cvblue}{HTML}{304263}
+
+%%%%%%% USER COMMAND DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%
+% These are the real workhorses of this template
+\newcommand{\dates}[1]{\hfill\mbox{\textbf{#1}}} % Bold stuff that doesn’t got broken into lines
+\newcommand{\is}{\par\vskip.5ex plus .4ex} % Item spacing
+\newcommand{\smaller}[1]{{\small$\diamond$\ #1}}
+\newcommand{\headleft}[1]{\vspace*{3ex}\textsc{\textbf{#1}}\par%
+    \vspace*{-1.5ex}\hrulefill\par\vspace*{0.7ex}}
+\newcommand{\headright}[1]{\vspace*{2.5ex}\textsc{\Large\color{cvblue}#1}\par%
+     \vspace*{-2ex}{\color{cvblue}\hrulefill}\par}
+\newcommand{\bghead}[1]{%
+    \begingroup
+    \setlength{\fboxsep}{0.2em}% Padding matches font size
+    \colorbox{cvblue!20}{\strut\small\textsc{\textbf{#1}}}%
+    \endgroup
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[colorlinks = true, urlcolor = white, linkcolor = white]{hyperref}
+
+\begin{document}
+
+% Style definitions -- killing the unnecessary space and adding the skips explicitly
+\setlength{\topskip}{0pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\fboxsep}{0pt}
+\pagestyle{empty}
+\raggedbottom
+
+\begin{minipage}[t]{0.33\textwidth} %% Left column -- outer definition
+%  Left column -- top dark rectangle
+\colorbox{cvblue}{\begin{minipage}[t][5mm][t]{\textwidth}\null\hfill\null\end{minipage}}
+
+\vspace{-.2ex} % Eliminates the small gap
+\colorbox{cvblue!90}{\color{white}  %% LEFT BOX
+\kern0.09\textwidth\relax% Left margin provided explicitly
+\begin{minipage}[t][293mm][t]{0.82\textwidth}
+\raggedright
+\vspace*{2.5ex}
+
+\Large \textbf{\textsc{Ankuj}} Uniyal \normalsize 
+
+% Centering without extra vertical spacing
+\null\hfill\includegraphics[width=0.65\textwidth]{ankuj_resume_profile_photo}\hfill\null
+
+\vspace*{0.5ex} % Extra space after the picture
+
+\headleft{Contact details}
+\small % To fit more content
+\faSend\ {\small mail@mail.in} \\[0.4ex]
+\faMobilePhone\ +91\,**\,**\,**\,**\,** \\[0.4ex]
+\faLinkedin\ {\small www.linkedin.com/in/ankujuniyal } \\[0.4ex]
+\faGithub\ {\small https://github.com/ankujuniyal} \\[0.4ex]
+\normalsize
+
+\headleft{Education}
+\small % To fit more content
+\faGraduationCap\ {\small Bachelor of Technology in Information Technology } {\textsc{ 2009-2013}} \\[0.4ex]
+\faUniversity\ {\small Uttarakhand technical university}
+\normalsize
+
+\headleft{Technical Skills}
+\small % To fit more content
+\faArrowCircleRight\ \textbf{DevSecOps: } Blackduck, Coverity, Sonarqube, Prisma(palo alto) \\[0.4ex]
+\faArrowCircleRight\ \textbf{Programming Languages \&
+Frameworks: } Java 8, Python, Bash, Groovy, Springboot, Flask  \\[0.4ex] 
+\faArrowCircleRight\ \textbf{Cloud Platforms \& Services: AWS,
+Azure, GCP (Google Cloud Platform), Akamai (CDN),
+Cloud Computing, VRA (Vmware)} \\[0.4ex] 
+\faArrowCircleRight\ \textbf{DevOps \& CI/CD Tools: } 
+Jenkins, GoCd, Docker, Helm, Kubernetes, Ansible, Terraform \\[0.4ex] 
+\faArrowCircleRight\ \textbf{Web, App/API Servers: } 
+Apache Tomcat, Apache HTTP, Nginx, Kong, Weblogic \\[0.4ex] 
+\faArrowCircleRight\ \textbf{Monitoring Tools: }  Prometheus, Grafana, Open telemetry, Elasticsearch Stack (ELK), Zabbix, Flunetbit \\[0.4ex] 
+\faArrowCircleRight\ \textbf{Database: } Mongo, Mysql, influxdb, Elasticserach \\[0.4ex] 
+\faArrowCircleRight\ \textbf{Concepts \& Technologies:} Microservices / Micro-services, Data pipeline \\[0.4ex]
+\normalsize
+
+\headleft{\textbf{CORE COMPETENCIES}}
+\small
+\faArrowCircleRight\ \textbf{Cloud Architecture \& Strategy} \\[0.4ex] 
+\faArrowCircleRight\ \textbf{DevOps \& CI/CD Automation } \\[0.4ex] 
+\faArrowCircleRight\ \textbf{Microservices \& API Development} \\[0.4ex] 
+\faArrowCircleRight\ \textbf{Cloud-Native Solutions \& Deployment} \\[0.4ex] 
+\faArrowCircleRight\ \textbf{Scalability \& Performance Optimization } \\[0.4ex] 
+\normalsize
+
+
+\end{minipage}%
+\kern0.09\textwidth\relax%%Right margin provided explicitly to stretch the colourbox
+}
+\end{minipage}% Right column
+\hskip2.5em% Left margin for the white area
+\begin{minipage}[t]{0.56\textwidth}
+\setlength{\parskip}{0.8ex}% Adds spaces between paragraphs; use \\ to add new lines without this space. Shrink this amount to fit more data vertically
+
+\vspace{2ex}
+
+\headright{\textbf{PROFILE SUMMARY}}
+
+\faArrowCircleRight\ \textbf{Devops \& SRE} professional with \textbf{8+ years} of experience in designing and implementing \textbf{scalable, high-performance distributed systems} using
+\textbf{microservices architecture, Kafka, and cloud-native solutions}.
+
+\faArrowCircleRight\ Adept at \textbf{leading cross-functional teams}, driving architectural
+excellence, optimizing system reliability, and ensuring seamless \textbf{CI/CD integration} using
+\textbf{Docker} and \textbf{Kubernetes}
+
+\faArrowCircleRight\ \textbf{Kubernetes Application Developer certified} with expertise in designing, developing, and deploying
+\textbf{scalable}, \textbf{high-performance cloud-based applications} using \textbf{Java, Python, Spring Boot, and
+microservices architecture}
+
+\faArrowCircleRight\ \textbf{Redhat Certified Engineer (RHCE) }with a strong foundation in \textbf{Linux system administration},
+\textbf{networking}, and \textbf{security}, ensuring \textbf{robust and secure cloud environments}.
+
+\faArrowCircleRight\ Key contributor in implementing \textbf{GenAI}, \textbf{DevSecOps} practices, \textbf{kafka data pipeline} for Devops automation. 
+
+\faArrowCircleRight\ \textbf{Immediate Joiner}, \textbf{ready to drive cloud strategy}, \textbf{system architecture}, and engineering
+excellence for organizations focused on innovation and scalability.
+
+
+
+\headright{WORK EXPERIENCE}
+\small
+\is
+\bghead{Sr. Devops Engineer | Airtel | 2022.12 - Present }
+\is
+\faArrowCircleRight\ Led the migration of middleware to Kubernetes, improving scalability and deployment efficiency.
+\is
+\faArrowCircleRight\ Led the reduce compute costs by optimizing resource allocation and implementing GenAI.
+\is
+\faArrowCircleRight\ Implemented the CDN/GTM rule in Akamai to optimize content delivery and enhance user experience.   
+\is
+\faArrowCircleRight\ Managing API gateway(Kong) for secure and efficient API management.
+\is
+\faArrowCircleRight\ Enhanced CI/CD process to deploy applications on various platforms, reducing deployment time by 30\%.  
+\is
+\faArrowCircleRight\ Reduced overhead of manual docker file creation by creating automated docker file generation.
+\is
+\faArrowCircleRight\ Collaborated with cross-functional teams to define and implement cloud architecture strategies, resulting in a 25\% increase in system performance.
+\is
+\faArrowCircleRight\ Skills: Jenkins, Ansible, Docker, Kubernetes, Kong, Helm, Python, Groovy, Springboot, Kafka, MongoDB, MySQL, OpenShift, GCP, Agile, 
+\is
+
+\bghead{Devops Engineer | Airtel | 2021.06 - 2022.12 | 1.7yr}\\
+\faArrowCircleRight\ Revamp of continues integration and continues delivery pipeline using shared library to make it more efficient and reusable.
+\is
+\faArrowCircleRight\ Implementation of kubernets based application CI/CD.
+\is
+\faArrowCircleRight\ Implemented DevSecOps practices by integrating security tools like SAST and DAST into the CI/CD pipeline, ensuring code quality and security compliance.
+\is
+\faArrowCircleRight\ Skills: Jenkins, Ansible, Docker, Kubernetes, Helm,  Python, Groovy, DevSecOps (Blackduck, Coverity), Prisma (Palo Alto)
+\is
+
+\end{minipage}
+
+\newpage % <-- This should come after both minipages are closed
+
+\begin{minipage}[t]{0.33\textwidth} %% Left column -- outer definition
+%  Left column -- top dark rectangle
+\colorbox{cvblue}{\begin{minipage}[t][5mm][t]{\textwidth}\null\hfill\null\end{minipage}}
+
+\vspace{-.2ex} % Eliminates the small gap
+\colorbox{cvblue!90}{\color{white}  %% LEFT BOX
+\kern0.09\textwidth\relax% Left margin provided explicitly
+\begin{minipage}[t][293mm][t]{0.82\textwidth}
+\raggedright
+\vspace*{2.5ex}
+
+\vspace*{0.5ex} % Extra space after the picture
+
+\small
+\faArrowCircleRight\ \textbf{Security \& Compliance in Cloud } \\[0.4ex] 
+\faArrowCircleRight\ \textbf{AI/ML Integration } \\[0.4ex] 
+\faArrowCircleRight\ \textbf{Leadership \& Technical Team Management } \\[0.4ex] 
+\normalsize
+
+\headleft{\textbf{CERTIFICATIONS}}
+\small
+\faArrowCircleRight\ \textbf{RHCE 7} \\[0.4ex] 
+\faArrowCircleRight\ \textbf{RHCSA 7} \\[0.4ex] 
+\faArrowCircleRight\ \textbf{CCNA } \\[0.4ex] 
+
+\headleft{Personal information}
+%Year of birth: \textbf{1992} \\[0.5ex]
+Citizenship: \textbf{Indian} \\[0.5ex]
+Family: \textbf{Married with children} \\[0.5ex]
+Languages: \textbf{English}, \textbf{Hindi}
+
+
+\end{minipage}%
+\kern0.09\textwidth\relax%%Right margin provided explicitly to stretch the colourbox
+}
+\end{minipage}% Right column
+\hskip2.5em% Left margin for the white area
+\begin{minipage}[t]{0.56\textwidth}
+% Right column content for second page
+\setlength{\parskip}{0.8ex}% Adds spaces between paragraphs; use \\ to add new lines without this space. Shrink this amount to fit more data vertically
+
+\vspace{4ex}
+
+\bghead{Sr. Software Development Engineer | Unify | 2017.07 - 2021.05 | 3.11yrs}\\
+\faArrowCircleRight Zabbix auto discovery using python script using REST API, Python, and Flax Frameworks. Which reduce 100\% manual effort.
+\is
+\faArrowCircleRight\ Deployment of weblogic and apache tomcat server using ansible playbook.
+\is
+\faArrowCircleRight\ ELK Pipelines improvemnt using logstash and Elasticserach.
+\is
+\faArrowCircleRight\ Daily MIS reports using Jasper Reporting tool.
+\is
+\faArrowCircleRight\ Data pipeline using Kafka connect, Mongo, and Elasticsearch.
+\is
+\faArrowCircleRight\ Kafka cluster setup and management.
+\is
+\faArrowCircleRight\ Dockerizing the application and deployment on kubernets cluster.
+\is
+\faArrowCircleRight\ L1 And L2 support for production issues.
+\is
+\faArrowCircleRight\ Skills: Jenkins, Ansible, Docker, Grafana, ELK, Python, Shell Scripting, Kafka, MongoDB, MySQL.
+\is
+
+\bghead{System Administrator | Silverpush | Gurgaon | 2016.02 - 2017.01 | 1yr}\\
+\faArrowCircleRight\ Automated deployment of node based application. 
+\is
+\faArrowCircleRight\ Setup rack cluster for Ad-detection system using intel mini more than 500+.
+\is
+\faArrowCircleRight\ Implemented monitoring using zabbix for more than 100+ servers.
+\is
+\faArrowCircleRight\ Implemented firewall policy on Sonicwall.
+\is
+\faArrowCircleRight\ Setup wireless network using ruckus &\ unifi for 100+ users.
+\is
+\faArrowCircleRight\ Skills: Docker, Python, Shell Scripting, bigquery, MongoDB, Zabbix, Firewall.
+\is
+
+\bghead{System Administrator | Rapidsoft | Gurgaon | 2013.10 - 2016.02 | 2.5yrs}\\
+\faArrowCircleRight\ Automating Software setup and windows installation using network to boost efficiency by 30\% and saving over 200 hours of
+manual labor monthly.
+\is
+\faArrowCircleRight\ PHP Website and database deployment using shellscript to reduce manual work by 40\%.
+\is
+\faArrowCircleRight\ Management of Virtual  Machine Instances on Amazon"s EC2 and RDS Platforms including configuring EBS volumes, auto-scaling, backup snapshots, etc
+\is
+\faArrowCircleRight\ Managing allocation for database instances for development \& staging purposes on Amazon"s RDS platform using MySQL Command Line, MS SQL Enterprise Manager and tools such as PHPMyadmin.
+\is
+\faArrowCircleRight\ Work with technical support staff at outsourced server companies as required resolving outages.
+\is
+\faArrowCircleRight\ Desktop and hardware support for 100+ employees across multiple locations.
+\is
+\faArrowCircleRight\ Setting up citix call center environment for 50+ users.
+\is
+\faArrowCircleRight\ Setting up and managing Zimbra mail server for 200+ users.
+\is
+\faArrowCircleRight\ Manage Rack server hardware, OS installation, RAID configuration, etc.
+\is
+\faArrowCircleRight\ Manage Firewall policies on Sonicwall. 
+\is
+\faArrowCircleRight\ Skills: PHPMyadmin, Mysql, WindowsServer, IIS web server, SMTP, AWS, Firewall.
+\is
+\end{minipage}
+
+% ...existing code...
+
+\end{document}

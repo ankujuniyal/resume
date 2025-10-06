@@ -21,7 +21,7 @@
 \usepackage{ifthen}
 
 \nofiles                            % .aux files are not needed for resumes
-\pagestyle{empty}                   % resumes do not need page numbers
+% \pagestyle{empty}                   % resumes do not need page numbers
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % HEADINGS: Commands for printing name and address
